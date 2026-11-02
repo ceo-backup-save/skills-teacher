@@ -28,7 +28,7 @@ import urllib.request
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
-OUT_DIR = os.path.join(BASE_DIR, "out")
+OUT_DIR = os.path.join(BASE_DIR, "resultados")
 CACHE = os.path.join(DATA_DIR, "lotofacil_cache.json")
 
 CAIXA_URL = "https://servicebus2.caixa.gov.br/portaldeloterias/api/lotofacil/{concurso}"
