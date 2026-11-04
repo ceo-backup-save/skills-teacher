@@ -15,12 +15,18 @@ comportamento por concurso isolado e cruzamento entre os dois jogos.
 | `resultados.json` | saída bruta, para reuso |
 | `dados/*.json` | histórico completo dos sorteios (fonte: eitchtee/loterias.json) |
 | `ultimos-100-*.csv` | os dois recortes usados, em CSV |
+| `quentes.py` | **mapa de calor (HEAT v1)** — ranking de dezenas de cada jogo |
+| `quentes-*.md` | saída do mapa de calor (top 10, frias, em alta, atrasos) |
+| `prompts/` | um prompt por jogo + um cruzado, prontos para colar em qualquer assistente |
+| `GUIA-DE-USO.md` | como usar os prompts, como auditar a resposta e como ler cada número |
 
 ## Como reproduzir
 
 ```bash
 python3 analise.py     # ~25 s (Monte Carlo com semente fixa)
 python3 relatorio.py
+python3 quentes.py --salvar                    # mapa de calor dos dois jogos
+python3 quentes.py --exportar-dados --janela 30  # bloco para colar no prompt
 ```
 
 Sem dependências: só a biblioteca padrão do Python 3.11+.
